@@ -1,0 +1,13 @@
+<svg width="1200" height="540" style="stroke: black;stroke-width: 0;">
+      <circle cx="100" cy="100" r="40" style="fill: #1e435d;fill-opacity: .5;"></circle>
+      <circle cx="100" cy="100" r="25" style="fill: #fff;"></circle>
+      <!-- 四个小圆 -->
+      <circle cx="100" cy="85" r="8" style="fill: #1e435d;fill-opacity: .8;"></circle>
+      <circle cx="85" cy="100" r="8" style="fill: #1e435d;fill-opacity: .8;"></circle>
+      <circle cx="100" cy="115" r="8" style="fill: #1e435d;fill-opacity: .8;"></circle>
+      <circle cx="115" cy="100" r="8" style="fill: #1e435d;fill-opacity: .8;"></circle>
+      <!-- 中间小圆点 -->
+      <circle cx="100" cy="100" r="4" style="fill: #1e435d;fill-opacity: .8;"></circle>
+      <path style="stroke-width: 2px;" d="
+      "></path>
+    </svg>

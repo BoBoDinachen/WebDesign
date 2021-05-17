@@ -1,0 +1,230 @@
+:root{
+  --screenWidth: 1200px;
+  --screenHeight: 540px;
+}
+*,html{
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  position: relative;
+  border-radius: 40px;
+  /* 大小为1200x540 */
+  width: var(--screenWidth);
+  height: var(--screenHeight);
+  background-color: skyblue;
+  contain: paint;
+}
+/* 视频背景 */
+video{
+  display: block;
+  position: fixed;
+  top: -58px;
+  width:1200px;
+  z-index: -1000;
+  transform: scale(1.2);
+  object-fit: cover;
+  opacity: .9;
+}
+
+/* logo */
+.logo{
+  position: absolute;
+  top: 20px;
+  left: 70px;
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  background-image: url(./icons/logo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/* 右侧菜单栏 */
+.right-menu{
+  position: absolute;
+  list-style: none; 
+  right: 90px;
+  top: 25px;
+  height: 400px;
+}
+/* 菜单项 */
+.right-menu li > span{
+  display: inline-block;
+  position: relative;
+  width: 35px;
+  height: 55px;
+  margin-bottom: 6px;
+  background-repeat:no-repeat;
+  background-size: 35px;
+  background-position: top;
+  opacity: .8;
+  /* background-color: aqua; */
+}
+/* 菜单文字 */
+.right-menu li > span::after{
+  width: 40px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  font-family: "楷体";
+  color: #fff;
+}
+.right-menu li:nth-child(1)>span{
+  background-image: url(./icons/公告.png);
+}
+.right-menu li:nth-child(1)>span::after{
+  content: "公告";
+}
+.right-menu li:nth-child(2)>span{
+  background-image: url(./icons/播放.png);
+}
+.right-menu li:nth-child(2)>span::after{
+  content: "播放";
+}
+.right-menu li:nth-child(3)>span{
+  background-image: url(./icons/反馈.png);
+}
+.right-menu li:nth-child(3)>span::after{
+  content: "反馈";
+}
+.right-menu li:nth-child(4)>span{
+  background-image: url(./icons/试玩.png);
+}
+.right-menu li:nth-child(4)>span::after{
+  content: "试玩";
+}
+.right-menu li:nth-child(5)>span{
+  background-image: url(./icons/修复.png);
+}
+.right-menu li:nth-child(5)>span::after{
+  content: "修复";
+}
+.right-menu li:nth-child(6)>span{
+  background-image: url(./icons/账号找回.png);
+}
+.right-menu li:nth-child(6)>span::after{
+  width: 70px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "账号找回";
+}
+
+/* 底部控件 */
+.footer{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  bottom: 0;
+  padding-top: 5px;
+  width: 100%;
+  height: 170px;
+  /* background-color: chartreuse; */
+}
+
+/* 进入游戏按钮 */
+.footer-btn{
+  display: inline-block;
+  margin-top: 5px;
+  line-height: 40px;
+  text-align: center;
+  width: 220px;
+  height: 40px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 2px;
+  opacity: .7;
+  background: linear-gradient(#999999 30%,#866270,#a63248);
+  border-bottom: #dc6a74 solid 4px;
+  font-family: "楷体";
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.footer-agree{
+  width: 400px;
+  height: 20px;
+  display: flex;
+  transform: translateY(10%);
+  justify-content: start;align-items: center;
+}
+.footer-agree > span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #999999;
+  margin-right: 10px;
+}
+.footer-agree > label{
+  color: white;
+  font-size: 14px;
+  font-family: "楷体";
+}
+.footer-agree > label > a{
+  margin-left: 5px;
+  text-decoration: none;
+  color: #e9cc7c;
+  font-size: 16px;
+  font-family: "楷体";
+}
+
+/* 底部信息 */
+.footer-info{
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  height: 50px;
+  padding:5px 15px 5px;
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
+  color: white;
+  font-family: "楷体";
+  justify-content: space-between;
+}
+.footer-info-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  font-size: 5px;
+  font-weight: 0;
+  flex-grow: 1;
+}
+.footer-info .footer-info-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 2;
+}
+.footer-info .footer-info-center label{
+  text-align: center;
+  font-size: 5px;
+  width: 750px;
+}
+.footer-info-right{
+  flex-grow: 1;
+  display: flex;
+  justify-content: start;
+}
+.footer-info-right-icon{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-info-right-icon > img{
+  width: 40px;
+  height: 40px;
+}
