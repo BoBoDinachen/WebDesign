@@ -1,0 +1,363 @@
+/* 定义全局变量-颜色 */
+:root{
+  /* 王冠颜色 */
+  --diadema-color: #f4d14f;
+  /* 头发颜色 */
+  --hair-color:#2f322b;
+  /* 皮肤颜色 */
+  --skin-color:#efc69a;
+  /* 衣服颜色 */
+  --clothes-color:#1e78cd;
+  /* 裤子颜色 */
+  --trousers-color:#ecf0f3;
+  /* 脸颊颜色 */
+  --cheek-color:#cc7856;
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* 整个波吉的容器-居中 */
+.container-box{
+  position: absolute;
+  left: 50%;top: 50%;
+  transform: translate(-50%,-50%);
+  width: 550px;
+  height: 600px;
+  background-color: #56afdf;
+}
+
+/* 波吉的头部 */
+.head-box{
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 200px;
+  background-color: var(--skin-color);
+  border: 3px solid black;
+  border-radius: 30% 30% 30% 30%;
+  overflow: hidden;
+  /* z-index: 5; */
+}
+/* 头发 */
+.head-box .hair{
+  position: absolute;
+  left: -20px;top: 35px;
+  width: 30px;
+  height: 80px;
+  background-color: var(--hair-color);
+  border-radius: 50%;
+}
+.head-box .hair2{
+  position: absolute;
+  left: -70px;top: -25px;
+  width: 120px;
+  height: 100px;
+  background-color: var(--hair-color);
+  border-radius: 50%;
+}
+.head-box .hair3{
+  position: absolute;
+  left: -15px;top: -70px;
+  width: 120px;
+  height: 100px;
+  background-color: var(--hair-color);
+  border-radius: 50%;
+}
+.head-box .hair4{
+  position: absolute;
+  left: 100px;top: -60px;
+  width: 120px;
+  height: 100px;
+  background-color: var(--hair-color);
+  border-radius: 50%;
+}
+.head-box .hair4::before{
+  content: "";
+  width: 50px;
+  height: 60px;
+  top: 50px;left: 40px;
+  background-color: var(--skin-color);
+  position: absolute;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+}
+.head-box .hair4::after{
+  content: "";
+  width: 50px;
+  height: 60px;
+  top: 40px;left: 70px;
+  background-color: var(--skin-color);
+  position: absolute;
+  border-radius: 50%;
+  transform: rotate(-40deg);
+}
+.head-box .hair5{
+  position: absolute;
+  left: 130px;top: -80px;
+  width: 120px;
+  height: 100px;
+  background-color: var(--hair-color);
+  border-radius: 50%;
+  transform: rotate(-15deg);
+}
+.head-box .hair6{
+  position: absolute;
+  left: 185px;top: -80px;
+  width: 120px;
+  height: 120px;
+  background-color: var(--hair-color);
+  border-radius: 50%;
+  transform: rotate(55deg);
+}
+.head-box .hair7{
+  position: absolute;
+  left: 230px;top: 10px;
+  width: 40px;
+  height: 100px;
+  background-color: var(--hair-color);
+  border-radius: 50%;
+  transform: rotate(-3deg);
+}
+/* 外部头发 */
+.outer-hair{
+  position: absolute;
+  left: 50%;top: 10%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 100px;
+}
+.outer-hair .hair{
+  position: absolute;
+  left: -16px;top: 60px;
+  width: 30px;
+  height: 50px;
+  background-color: var(--hair-color);
+  border-radius: 50%;
+  transform: rotate(3deg);
+}
+.outer-hair .hair2{
+  position: absolute;
+  left: -5px;top: 10px;
+  width: 40px;
+  height: 70px;
+  background-color: var(--hair-color);
+  border-radius: 50%;
+  transform: rotate(20deg);
+}
+.outer-hair .hair3{
+  position: absolute;
+  left: 25px;top: -30px;
+  width: 100px;
+  height: 60px;
+  background-color: var(--hair-color);
+  border-radius: 50%;
+  transform: rotate(-10deg);
+}
+.outer-hair .hair4{
+  position: absolute;
+  left: 120px;top: -35px;
+  width: 100px;
+  height: 50px;
+  background-color: var(--hair-color);
+  border-radius: 50%;
+  transform: rotate(10deg);
+}
+.outer-hair .hair5{
+  position: absolute;
+  left: 115px;top: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--hair-color);
+  border-radius: 50%;
+  transform: rotate(10deg);
+}
+.outer-hair .hair6{
+  position: absolute;
+  left: 215px;top: -10px;
+  width: 30px;
+  height: 50px;
+  background-color: var(--hair-color);
+  border-radius: 50%;
+  transform: rotate(-35deg);
+}
+.outer-hair .hair7{
+  position: absolute;
+  left: 235px;top: 25px;
+  width: 25px;
+  height: 70px;
+  background-color: var(--hair-color);
+  border-radius: 50%;
+  transform: rotate(-5deg);
+}
+/* 耳朵部分 */
+.left-ear{
+  position: absolute;
+  left: 135px;top: 155px;
+  width: 25px;
+  height: 50px;
+  border-radius: 50%;
+  transform: rotate(-5deg);
+  font-weight: bold;
+  background-color: var(--skin-color)
+}
+.left-ear span:nth-of-type(1){
+  position: absolute;
+  display: block;
+  top: 17px;left: 5px;
+  transform: rotate(-90deg);
+}
+.left-ear span:nth-of-type(2){
+  position: absolute;
+  display: block;
+  /* background-color: aqua; */
+  top: 7px;left: -3px;
+  transform: rotate(150deg);
+}
+.right-ear{
+  position: absolute;
+  left: 390px;top: 155px;
+  width: 25px;
+  height: 50px;
+  border-radius: 50%;
+  transform: rotate(5deg);
+  font-weight: bold;
+  background-color: var(--skin-color)
+}
+.right-ear span:nth-of-type(1){
+  position: absolute;
+  display: block;
+  top: 20px;left: 5px;
+  transform: rotate(360deg);
+}
+.right-ear span:nth-of-type(2){
+  position: absolute;
+  display: block;
+  /* background-color: aqua; */
+  top: 3px;left: 9px;
+  transform: rotate(-50deg);
+}
+/* 嘴 */
+.head-box .mouth{
+  position: absolute;
+  top: 55px;
+}
+/* 眉毛 */
+.head-box .left-brow{
+  position: absolute;
+  top: 3px;left: 50px;
+  font-weight: 100;
+  font-size: 40px;
+}
+.head-box .right-brow{
+  position: absolute;
+  transform: rotate(12deg);
+  top: 10px;left: 165px;
+  font-weight: 100;
+  font-size: 40px;
+}
+/* 眼睛 */
+.head-box .left-eye{
+  position: absolute;
+  left: 40px;top: 60px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  border: 3px solid black;
+}
+.head-box .left-eye::before{
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;top: 50%;
+  transform: translate(-50%,-50%);
+  width: 23px;height: 23px;
+  background-color: #2f322b;
+  border-radius: 50%;
+}
+.head-box .right-eye{
+  position: absolute;
+  left: 150px;top: 65px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  border: 3px solid black;
+}
+.head-box .right-eye::before{
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;top: 50%;
+  transform: translate(-50%,-50%);
+  width: 23px;height: 23px;
+  background-color: #2f322b;
+  border-radius: 50%;
+}
+/* 鼻子 */
+.head-box .nose{
+  position: absolute;
+  display: block;
+  top: 100px;left: 123px;
+  font-weight: bold;
+}
+/* 脸颊 */
+.head-box .left-face{
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  top: 100px;left: 23px;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: var(--cheek-color);
+}
+.head-box .right-face{
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  top: 105px;left: 200px;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: var(--cheek-color);
+}
+.diadema-box{
+  position: absolute;
+  left: 132px;top: 50px;
+  width: 70px;
+  height: 25px;
+  background-color: var(--diadema-color);
+  transform: rotate(-45deg);
+}
+.diadema-box div:nth-of-type(1){
+  position: absolute;
+  top: -25px;
+  left: 0px;
+  width: 0;height: 0;
+  border-color:transparent transparent transparent var(--diadema-color);
+  border-width: 25px 25px 25px 25px;
+  border-style: solid;
+}
+.diadema-box div:nth-of-type(2){
+  position: absolute;
+  top: -35px;
+  left: 15px;
+  width: 0;height: 0;
+  border-color:transparent transparent var(--diadema-color) transparent;
+  border-width: 20px 20px 20px 20px;
+  border-style: solid;
+}
+.diadema-box div:nth-of-type(3){
+  position: absolute;
+  top: -18px;
+  left: 20px;
+  width: 0;height: 0;
+  border-color:transparent var(--diadema-color) transparent transparent;
+  border-width: 25px 25px 25px 25px;
+  border-style: solid;
+}
